@@ -35,7 +35,8 @@ def task_func():
             html = html + '简介：'+content['target']['excerptArea']['text']+ '\n\n'
         html = html + '链接：'+content['target']['link']['url']+ '\n'
         html = html + '*'*10+ '\n'
-    put_markdown(html)
+        put_markdown(html)
+        html = ''
 
 # Flask+WebIO框架
 app = Flask(__name__)
