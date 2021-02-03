@@ -28,6 +28,7 @@ def task_func():
     contents = hot_json['initialState']['topstory']['hotList']
     html = ''
     # 用print输出知乎热榜
+    put_markdown('##知乎热榜')
     for content in contents:
         html = html + '####'+content['target']['titleArea']['text'] + '\n'
         html = html + '回答：'+str(content['feedSpecific']['answerCount'])+'个'+ '\n\n'
