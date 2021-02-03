@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup
 def task_func():
     # 不用登录就能查看知乎热榜的链接
     zhihu_hot_url = 'https://www.zhihu.com/billboard'
+    put_markdown('##知乎热榜')
     # 获取网页内容
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0'}
     resp = requests.get(zhihu_hot_url,headers=headers)
@@ -28,7 +29,6 @@ def task_func():
     contents = hot_json['initialState']['topstory']['hotList']
     html = ''
     # 用print输出知乎热榜
-    put_markdown('##知乎热榜')
     for content in contents:
         html = html + '####'+content['target']['titleArea']['text'] + '\n'
         html = html + '回答：'+str(content['feedSpecific']['answerCount'])+'个'+ '\n\n'
