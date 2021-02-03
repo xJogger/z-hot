@@ -1,0 +1,5 @@
+{
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/zhihu_hot_vercel" }
+  ]
+}
